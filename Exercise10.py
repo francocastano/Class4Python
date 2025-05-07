@@ -39,7 +39,17 @@ morse = {
 code = ['.--.', '-.--', '-', '....', '---', '-.']
 
 
-def 
+def morse_tracutor(code:list) -> str:
+    traductor:dict = {}
+    message:str = ""
+    for key in morse.keys():
+        traductor[moese[element]] = element
+    for caracter in code:
+        message = message + traductor[caracter]
+    return message
+
+
+    
 
 traductor = {}
 for element in morse.keys():
