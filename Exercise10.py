@@ -34,22 +34,26 @@ morse = {
     's': '...', 't': '-', 'u': '..-',
     'v': '...-', 'w': '.--', 'x': '-..-',
     'y': '-.--', 'z': '--..'
-},
+}
 
 code = ['.--.', '-.--', '-', '....', '---', '-.']
 
 
-def morse_tracutor(code:list) -> str:
+def reverse_morse(morse:dict) -> dict:
     traductor:dict = {}
+    for i in morse.keys():
+        traductor[morse[i]] = i
+    return traductor
+print(reverse_morse(morse))
+
+def morse_traductor(morse,code:list) -> str:
     message:str = ""
-    for key in morse.keys():
-        traductor[moese[element]] = element
     for caracter in code:
-        message = message + traductor[caracter]
+        message = message + reverse_morse(morse)[caracter]
     return message
 
+print(morse_traductor(morse,code))
 
-    
 
 traductor = {}
 for element in morse.keys():
@@ -59,4 +63,3 @@ message:str = ""
 for i in code:
     message = message + traductor[i]
 print(message)
-

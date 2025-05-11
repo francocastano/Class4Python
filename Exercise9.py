@@ -27,7 +27,6 @@ def get_min_number(numbers:list) -> int:
     for i in numbers:
         if i <= min:
             min = i
-    print(min)
 get_min_number(numbers)
 
 def get_max_number(numbers:list) -> int:
@@ -35,12 +34,24 @@ def get_max_number(numbers:list) -> int:
     for i in numbers:
         if i >= max:
             max = i
-    print(max)
 get_max_number(numbers)
 
 def get_min_and_max(numbers:list) -> list:
+    min_and_max = []
     min:int = get_min_number(numbers)
     max:int = get_max_number(numbers)
-    min_and_max = (min,max)
+    min_and_max.append(min)
+    min_and_max.append(max)
     return min_and_max
+
+    
+
 print(get_min_and_max(numbers))
+
+def words_stats_a(words:list) -> list:
+    a_words = []
+    for caracter in words:
+        if caracter[0] == "a":
+            a_words.append(caracter)
+    return a_words
+print(words_stats_a(words))
